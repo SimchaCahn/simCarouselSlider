@@ -1,0 +1,60 @@
+.scs_radioWrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7px;
+}
+
+.scs_radio {
+    display: none;
+}
+
+.scs_niceRadio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #303F42;
+}
+
+.scs_niceRadio::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -4px;
+    transition: background-color 0.25s linear;
+}
+
+.scs_radio:checked + .scs_niceRadio::before {
+    background-color: #4f755b;
+    ;
+}
+
+.scs_radio:checked + .scs_niceRadio {
+    border: 3px solid #4f755b;
+    ;
+}
+
+.scs_wrapperShortOuter {
+    overflow: hidden;
+}
+
+.scs_wrapperLongInner {
+    display: flex;
+    align-items: flex-start;
+    transition-property: transform, height;
+    transition-duration: 0.7s;
+    transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.scs_content {
+    overflow: hidden;
+    display: inline-block;
+}
